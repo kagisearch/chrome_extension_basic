@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Kagi Search",
+  "version": "1.0",
+  "description": "Set Kagi as your default search engine, while also preserving your session in private browsing. Remember to enable 'Allow Incognito'.",
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon_16px.png",
+    "32": "icons/icon_32px.png",
+    "48": "icons/icon_48px.png",
+    "180": "icons/icon_180px.png"
+  },
+  "action": {
+    "default_icon": "icons/icon_32px.png",
+    "default_title": "Kagi Search"
+  },
+  "permissions": [
+    "contextMenus",
+    "cookies",
+    "declarativeNetRequest",
+    "webRequest"
+  ],
+  "host_permissions": ["https://*.kagi.com/*"],
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Kagi",
+      "search_url": "https://kagi.com/search?q={searchTerms}",
+      "favicon_url": "https://assets.kagi.com/v2/favicon-32x32.png",
+      "keyword": "@kagi",
+      "is_default": true,
+      "suggest_url": "https://kagi.com/api/autosuggest?q={searchTerms}",
+      "encoding": "UTF-8"
+    }
+  },
+  "incognito": "spanning"
+}
