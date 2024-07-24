@@ -15,10 +15,8 @@ This extension is not yet available.
 
 ## Setup
   1. Navigate to the extension's settings page `chrome://extensions`
-  1. Click `Details` on the Kagi Search Extension
-  - ![Screenshot of Extensions Page](docs/show-extensions.png)
-  2. Scroll down and enable `Allow in Incognito`
-  - ![Screenshot of Extensions Settings](docs/allow-incognito.png)
+  1. Click `Details` on the Kagi Search Extension ![Screenshot of Extensions Page](docs/show-extensions.png)
+  2. Scroll down and enable `Allow in Incognito` ![Screenshot of Extensions Settings](docs/allow-incognito.png)
 
 ## Permissions
 - `Block content on any page`
