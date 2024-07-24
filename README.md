@@ -7,7 +7,9 @@ Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ka
 ## Features
 - Sets Kagi as your default search engine
 - Preserves your login across private browsing
-  - remember to click 'allow incognito' on the extension settings page.
+  1. Navigate to the extension's settings page `chrome://extensions/?id=cncabmhlempghjaeefeggjemhadkbeaf`
+  2. Scroll down and click `allow incognito`
+  - ![Screenshot of Extensions Settings](docs/allow-incognito.png)
 
 ## Additional Features
 Kagi has many more features to offer, unfortunately due to [Google Store policies](https://developer.chrome.com/docs/webstore/troubleshooting/#single-use) these must be provided by a separate extension.
