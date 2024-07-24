@@ -18,7 +18,6 @@
     "default_title": "Kagi Search"
   },
   "permissions": [
-    "contextMenus",
     "cookies",
     "declarativeNetRequest",
     "webRequest"
