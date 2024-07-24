@@ -9,7 +9,7 @@ Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ka
 - Preserves your login across private browsing
 
 ## Additional Features
-Kagi has many more features to offer, unfortunately due to [Google Store policies](https://developer.chrome.com/docs/webstore/troubleshooting/#single-use) these must be provided by a separate extension.
+Kagi has many more features to offer, unfortunately due to [Google Web Store Policies](https://developer.chrome.com/docs/webstore/troubleshooting/#single-use) these must be provided by a separate extension.
 
 This extension is not yet available.
 
@@ -17,11 +17,12 @@ This extension is not yet available.
   1. Navigate to the extension's settings page `chrome://extensions`
   1. Click `Details` on the Kagi Search Extension
   - ![Screenshot of Extensions Page](docs/show-extensions.png)
-  2. Scroll down and click `allow incognito`
+  2. Scroll down and enable `Allow in Incognito`
   - ![Screenshot of Extensions Settings](docs/allow-incognito.png)
 
 ## Permissions
-- `Block content on any page`: The Kagi extension only ever works on Kagi.com, see the code for yourself. This permission is unfortunately named.
+- `Block content on any page`
+  - The Kagi extension only ever works on Kagi.com, see the code for yourself. This permission is unfortunately named.
 
 ## Platform Limitations
 As per [Google's Docs](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override) the API to change the default serarch engine is only available on Windows and Mac.
