@@ -27,8 +27,8 @@ Accordingly, if you are developing the extension on Linux you may see the below 
 
 ## Setting Default Search on Linux
 1. Navigate to [kagi.com](https://kagi.com) and if necessary, sign in.
-2. Navigate to `chrome://settings/searchEngines` [link](chrome://settings/searchEngines).
+2. Navigate to `chrome://settings/searchEngines`.
 3. In the section `Inactive shortcuts` click `Activate` on the Kagi entry. ![Screenshot of Kagi Entry in Inactive Shortcuts](docs/inactive-shortcuts.png)
-4. Now that Kagi has moved to the `Site Search` section, open the side meny and click `Make default`. ![Screenshot of Kagi Entry in Site Search](docs/site-search.png)
+4. Now that Kagi has moved to the `Site Search` section, open the side menu and click `Make default`. ![Screenshot of Kagi Entry in Site Search](docs/site-search.png)
 5. Kagi will now be in the `Search Engines` section. ![Screenshot of Kagi Entry in Search Engines](docs/search-engines.png)
 6. For added privacy, click the 'pencil' icon to edit the Kagi entry. Replace the bottom field with `https://kagi.com/search?q=%s`. This step is not necessary but is recommended. ![Screenshot of Editing the Kagi Search Entry](docs/edit-search-engine.png)
