@@ -32,6 +32,8 @@ Accordingly, if you are developing the extension on Linux you may see the below 
 
 
 ## Setting Default Search on Linux
+Note that unfortunately, this does not provide autocompleting search features.
+
 1. Navigate to [kagi.com](https://kagi.com) and if necessary, sign in.
 2. Navigate to `chrome://settings/searchEngines`.
 3. In the section `Inactive shortcuts` click `Activate` on the Kagi entry. ![Screenshot of Kagi Entry in Inactive Shortcuts](docs/inactive-shortcuts.png)
