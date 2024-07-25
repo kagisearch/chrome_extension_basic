@@ -15,7 +15,8 @@
   },
   "action": {
     "default_icon": "icons/icon_32px.png",
-    "default_title": "Kagi Search"
+    "default_title": "Kagi Search",
+    "default_popup": "popup.html"
   },
   "permissions": [
     "contextMenus",
