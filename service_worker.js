@@ -53,3 +53,23 @@ async function updateRules() {
     removeRuleIds: [1],
   });
 }
+
+// Image Search
+function kagiImageSearch(info) {
+  const imageUrl = encodeURIComponent(info.srcUrl);
+  chrome.tabs.create({
+    url: `${kagiBaseUrl}images?q=${imageUrl}&reverse=reference`,
+  });
+}
+
+chrome.contextMenus.create({
+  id: "kagi-image-search",
+  title: "Kagi Image Search",
+  contexts: ["image"],
+});
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "kagi-image-search") {
+    kagiImageSearch(info, tab);
+  }
+});
