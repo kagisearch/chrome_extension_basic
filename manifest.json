@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kagi Search",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Set Kagi as your default search engine while also preserving your session in private browsing. Remember to enable 'Allow Incognito'.",
   "background": {
     "service_worker": "service_worker.js",
@@ -15,7 +15,8 @@
   },
   "action": {
     "default_icon": "icons/icon_32px.png",
-    "default_title": "Kagi Search"
+    "default_title": "Kagi Search",
+    "default_popup": "popup.html"
   },
   "permissions": [
     "contextMenus",

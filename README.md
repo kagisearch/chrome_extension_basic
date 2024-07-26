@@ -10,9 +10,7 @@ Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/ka
 - Search-by-image by right-clicking on an image
 
 ## Additional Features
-Kagi has many more features to offer, unfortunately due to [Google Web Store Policies](https://developer.chrome.com/docs/webstore/troubleshooting/#single-use) these must be provided by a separate extension.
-
-This extension is not yet available.
+Kagi has many more features to offer, unfortunately due to [Google Web Store Policies](https://developer.chrome.com/docs/webstore/troubleshooting/#single-use) these must be provided by a separate extension. This extension is currently under development.
 
 ## Setup
   1. Navigate to the extension's settings page `chrome://extensions`
