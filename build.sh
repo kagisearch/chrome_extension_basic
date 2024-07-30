@@ -7,3 +7,4 @@ output="kagi_chrome_${version}.zip"
 
 rm -f "$output"
 zip -r "$output" "${inputs[@]}"
+unzip -d unpacked "$output" # test from this dir to ensure full asset capture
