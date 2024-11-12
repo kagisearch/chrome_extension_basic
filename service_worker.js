@@ -46,7 +46,7 @@ async function updateRules() {
         },
         condition: {
           urlFilter: `${kagiBaseUrl}*`,
-          resourceTypes: ["main_frame"],
+          resourceTypes: ["main_frame", "xmlhttprequest"],
         },
       },
     ],
