@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kagi Search",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Set Kagi as your default search engine while also preserving your session in private browsing. Remember to enable 'Allow Incognito'.",
   "background": {
     "service_worker": "service_worker.js",
@@ -24,7 +24,7 @@
     "declarativeNetRequestWithHostAccess",
     "webRequest"
   ],
-  "host_permissions": ["https://kagi.com/*"],
+  "host_permissions": ["https://*.kagi.com/*"],
   "chrome_settings_overrides": {
     "search_provider": {
       "name": "Kagi",

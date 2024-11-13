@@ -23,7 +23,7 @@ async function loadTokenFromCookies() {
 }
 
 chrome.webRequest.onCompleted.addListener(loadTokenFromCookies, {
-  urls: [`${kagiBaseUrl}*`],
+  urls: ["https://*.kagi.com/*"],
 });
 
 async function updateRules() {
@@ -45,7 +45,7 @@ async function updateRules() {
           ],
         },
         condition: {
-          urlFilter: `${kagiBaseUrl}*`,
+          urlFilter: `||kagi.com/`,
           resourceTypes: ["main_frame", "xmlhttprequest"],
         },
       },
