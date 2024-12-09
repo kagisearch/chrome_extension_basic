@@ -33,7 +33,7 @@ async function overrideNewTabPage(tab) {
   ]);
   if (isKagiSearchNewTabEnabled) {
     chrome.tabs.update(tab.id, {
-      url: chrome.runtime.getURL("new-tab.html"),
+      url: "https://kagi.com"
     });
   }
 }
