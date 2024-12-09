@@ -26,6 +26,20 @@ chrome.webRequest.onCompleted.addListener(loadTokenFromCookies, {
   urls: ["https://*.kagi.com/*"],
 });
 
+async function overrideNewTabPage(tab) {
+  if (tab.pendingUrl !== "chrome://newtab/") return;
+  const { isKagiSearchNewTabEnabled } = await chrome.storage.sync.get([
+    "isKagiSearchNewTabEnabled",
+  ]);
+  if (isKagiSearchNewTabEnabled) {
+    chrome.tabs.update(tab.id, {
+      url: chrome.runtime.getURL("new-tab.html"),
+    });
+  }
+}
+
+chrome.tabs.onCreated.addListener(overrideNewTabPage);
+
 async function updateRules() {
   // https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#dynamic-and-session-rules
   // dynamic needed as the token can't be known ahead of time
