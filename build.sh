@@ -2,7 +2,7 @@
 set -xeou pipefail
 
 version="$(jq -r .version <manifest.json)"
-inputs=(icons manifest.json service_worker.js popup.html popup-animation.gif)
+inputs=(icons manifest.json service_worker.js popup.html popup.js popup-animation.gif)
 output="kagi_chrome_${version}.zip"
 unpacked_dir="unpacked"
 
