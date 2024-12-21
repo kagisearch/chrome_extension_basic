@@ -18,12 +18,13 @@
     "default_title": "Kagi Search",
     "default_popup": "popup.html"
   },
+  "optional_permissions": [
+    "tabs"
+  ],
   "permissions": [
     "contextMenus",
     "cookies",
     "declarativeNetRequestWithHostAccess",
-    "storage",
-    "tabs",
     "webRequest"
   ],
   "host_permissions": ["https://*.kagi.com/*"],
