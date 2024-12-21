@@ -1,5 +1,6 @@
 const kagiBaseUrl = "https://kagi.com/";
 let extensionToken = undefined; // use process memory to hold the token
+const OPTIONAL_PERMISSIONS = { permissions: ["tabs"] };
 
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
@@ -28,10 +29,7 @@ chrome.webRequest.onCompleted.addListener(loadTokenFromCookies, {
 
 async function overrideNewTabPage(tab) {
   if (tab.pendingUrl !== "chrome://newtab/") return;
-  const { isKagiSearchNewTabEnabled } = await chrome.storage.sync.get([
-    "isKagiSearchNewTabEnabled",
-  ]);
-  if (isKagiSearchNewTabEnabled) {
+  if (await chrome.permissions.contains(OPTIONAL_PERMISSIONS)) {
     chrome.tabs.update(tab.id, {
       url: "https://kagi.com"
     });
