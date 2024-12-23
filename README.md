@@ -18,7 +18,7 @@ Kagi has many more features to offer, unfortunately due to [Google Web Store Pol
   2. Scroll down and enable `Allow in Incognito` ![Screenshot of Extensions Settings](docs/allow-incognito.png)
 
 ## Platform Limitations
-As per [Google's Docs](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override) the API to change the default serarch engine is only available on Windows and Mac.
+As per [Google's Docs](https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override) the API to change the default search engine is only available on Windows and Mac.
 
 Accordingly, if you are developing the extension on Linux you may see the below error, which is safe to ignore.
 

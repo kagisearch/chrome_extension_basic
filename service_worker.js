@@ -67,8 +67,9 @@ function kagiImageSearch(info) {
   });
 }
 
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+
+chrome.contextMenus.onClicked.addListener((info, _) => {
   if (info.menuItemId === "kagi-image-search") {
-    kagiImageSearch(info, tab);
+    kagiImageSearch(info);
   }
 });
