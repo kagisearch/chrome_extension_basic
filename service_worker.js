@@ -4,6 +4,11 @@ let extensionToken = undefined; // use process memory to hold the token
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({ url: kagiBaseUrl });
+    chrome.contextMenus.create({
+      id: "kagi-image-search",
+      title: "Kagi Image Search",
+      contexts: ["image"],
+    });
   }
 });
 
@@ -62,11 +67,6 @@ function kagiImageSearch(info) {
   });
 }
 
-chrome.contextMenus.create({
-  id: "kagi-image-search",
-  title: "Kagi Image Search",
-  contexts: ["image"],
-});
 
 chrome.contextMenus.onClicked.addListener((info, _) => {
   if (info.menuItemId === "kagi-image-search") {
