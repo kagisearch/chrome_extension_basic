@@ -145,7 +145,7 @@ chrome.contextMenus.onClicked.addListener((info, _) => {
   which will then find out the PP extension was uninstalled, and hence reinstate X-Kagi-Authorize.
 */
 
-const CHROME_KAGI_PRIVACY_PASS_EXTENSION = "npjfoendpcebbghndmnickidoabpbgaa"; // temporary extension ID, update when PP extension is published
+const CHROME_KAGI_PRIVACY_PASS_EXTENSION = "mendokngpagmkejfpmeellpppjgbpdaj";
 
 async function requestPPMode() {
   let pp_mode_enabled = false;
