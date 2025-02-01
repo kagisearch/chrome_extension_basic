@@ -178,6 +178,4 @@ chrome.runtime.onMessageExternal.addListener(async (request, sender, sendRespons
 });
 
 // when extension is started, ask for status report, and apply header accordingly
-(async () => {
-  await applyHeader();
-})();
+chrome.runtime.onStartup.addListener(applyHeader)
