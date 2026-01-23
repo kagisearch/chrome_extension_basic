@@ -37,5 +37,8 @@
       "encoding": "UTF-8"
     }
   },
+  "chrome_url_overrides": {
+    "newtab": "/newtab/index.html"
+  },
   "incognito": "spanning"
 }
