@@ -1,7 +1,10 @@
 const DARK_MODE_ENABLED = window.localStorage.getItem("dark_mode")
 const SEARCH_URL_BASE = "https://kagi.com/search?q="
 
-const SEARCH_BOX = document.querySelector(".search input");
+const SEARCH_BOX = document.querySelector(".search input[name=\"query\"]");
+const SEARCH_HIDDEN_ELEMENTS = document.getElementsByClassName("hide-no-search");
+const EXECUTE_SEARCH_BUTTON = document.getElementById("execute-search-button");
+const CLEAR_SEARCH_FIELD_BUTTON = document.getElementById("clear-search-text-button");
 const ENABLE_LIGHT_MODE_BUTTON = document.getElementById("enable-light-mode-button");
 const ENABLE_DARK_MODE_BUTTON = document.getElementById("enable-dark-mode-button");
 
@@ -54,7 +57,26 @@ SEARCH_BOX.onkeyup = (e) => {
     }
 }
 
-document.querySelector(".search img").onclick = () => {
+SEARCH_BOX.oninput = () => {
+    if (SEARCH_BOX.value.length > 0) {
+        for (let e of SEARCH_HIDDEN_ELEMENTS) {
+            e.style.setProperty("display", "block");
+        }
+    } else {
+        for (let e of SEARCH_HIDDEN_ELEMENTS) {
+            e.style.setProperty("display", "none");
+        }
+    }
+}
+
+CLEAR_SEARCH_FIELD_BUTTON.onclick = () => {
+    SEARCH_BOX.value = "";
+    for (let e of SEARCH_HIDDEN_ELEMENTS) {
+        e.style.setProperty("display", "none");
+    }
+}
+
+EXECUTE_SEARCH_BUTTON.onclick = () => {
     execute_search(SEARCH_BOX.value);
 }
 

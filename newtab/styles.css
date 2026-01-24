@@ -78,6 +78,8 @@ html, body {
 .search img {
     height: 50%;
     width: auto;
+
+    cursor: pointer;
 }
 
 .options-bar {
@@ -90,4 +92,12 @@ html, body {
 
 .options-bar img:hover {
     cursor: pointer;
+}
+
+.vertical-bar {
+    width: 0;
+    height: 50%;
+
+    margin: 0 10px;
+    border-left: 1px solid var(--background-alt);
 }
