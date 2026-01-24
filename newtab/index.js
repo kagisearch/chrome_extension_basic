@@ -48,15 +48,15 @@ function execute_search(query) {
 
 set_dark_mode(DARK_MODE_ENABLED? DARK_MODE_ENABLED : "false");
 
-SEARCH_BOX.addEventListener("keyup", (e) => {
+SEARCH_BOX.onkeyup = (e) => {
     if (e.key === "Enter") {
         execute_search(SEARCH_BOX.value);
     }
-})
+}
 
-document.querySelector(".search img").addEventListener("click", (e) => {
+document.querySelector(".search img").onclick = () => {
     execute_search(SEARCH_BOX.value);
-})
+}
 
 ENABLE_LIGHT_MODE_BUTTON.onclick = () => {
     set_dark_mode("false");
