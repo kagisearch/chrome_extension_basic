@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>New Tab</title>
+
+        <link rel="icon" href="/icons/icon_32px.png">
+        <link rel="stylesheet" href="styles.css">
+
+        <script defer src="index.js"></script>
+    </head>
+
+    <body>
+
+        <div id="content">
+
+            <div class="headers">
+                <img class="variable-color" src="/newtab/icons/kagi_text.svg" alt="kagi">
+                <img src="/newtab/icons/dog_logo.svg" alt="dog with tennis ball">
+            </div>
+
+            <div class="search">
+                <input
+                        name="query"
+                        type="text"
+                        placeholder="Let's fetch ..."
+                        autocapitalize="off"
+                        spellcheck="false"
+                        autocomplete="off"
+                        tabindex="0"
+                        maxlength="1024"
+                >
+                <img id="clear-search-text-button" style="display: none;" class="hide-no-search" src="/newtab/icons/x_icon.svg" alt="clear search">
+                <div style="display: none;" class="vertical-bar hide-no-search"></div>
+                <img id="execute-search-button" class="variable-color" src="/newtab/icons/search_icon.svg" alt="search">
+            </div>
+
+            <div class="options-bar">
+                <span>
+                    <img id="enable-light-mode-button" class="variable-color" src="/newtab/icons/light_mode_icon.svg" alt="enable light mode">
+                    <img id="enable-dark-mode-button" class="variable-color" src="/newtab/icons/dark_mode_icon.svg" alt="enable dark mode">
+                </span>
+            </div>
+
+        </div>
+
+    </body>
+</html>
