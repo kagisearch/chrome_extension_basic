@@ -4,6 +4,11 @@ let extensionToken = undefined; // use process memory to hold the token
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({ url: kagiBaseUrl });
+  }
+
+  // runs on every install/update, so existing users also get new menu items
+  // creating a menu item that already exists fails with "Cannot create item with duplicate id"
+  chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: "kagi-image-search",
       title: "Kagi Image Search",
