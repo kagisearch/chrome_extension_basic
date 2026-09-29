@@ -14,7 +14,12 @@ chrome.runtime.onInstalled.addListener((details) => {
       title: "Kagi Image Search",
       contexts: ["image"],
     });
-  }
+    chrome.contextMenus.create({
+      id: "kagi-summarize",
+      title: "Kagi Summarize",
+      contexts: ["page", "link"],
+    });
+  });
 });
 
 async function loadTokenFromCookies() {
@@ -95,10 +100,20 @@ function kagiImageSearch(info) {
   });
 }
 
+// Summarize
+function kagiSummarize(info) {
+  const pageUrl = encodeURIComponent(info.linkUrl || info.pageUrl);
+  chrome.tabs.create({
+    url: `${kagiBaseUrl}summarizer/?url=${pageUrl}`,
+  });
+}
+
 
 chrome.contextMenus.onClicked.addListener((info, _) => {
   if (info.menuItemId === "kagi-image-search") {
     kagiImageSearch(info);
+  } else if (info.menuItemId === "kagi-summarize") {
+    kagiSummarize(info);
   }
 });
 
